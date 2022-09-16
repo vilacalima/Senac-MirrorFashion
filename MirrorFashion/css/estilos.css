@@ -44,3 +44,51 @@ header{
     margin: 0 auto;
     width: 940px;
 }
+
+.busca, .menu-departamentos {
+    background-color: #dcdcdc;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    width: 230px;
+    float: left;
+}
+
+.menu-departamentos{
+    clear: left;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.destaque{
+    margin-top: 10px;
+}
+
+.busca h2, .busca form, .menu-departamentos h2 {
+    margin: 10px;
+}
+
+.menu-departamentos li {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 5px 10px;
+}
+
+.menu-departamentos a {
+    color: #333;
+    text-decoration: none;
+}
+
+.busca input[type=search]{
+    width: 210px;
+}
+
+.painel li{
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+    margin: 2px;
+    padding-bottom: 10px;
+}
+
+/*parei na pagina 51 criando 5 destaques*/
