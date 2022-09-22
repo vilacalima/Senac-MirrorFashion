@@ -91,4 +91,32 @@ header{
     padding-bottom: 10px;
 }
 
-/*parei na pagina 51 criando 5 destaques*/
+.painel{
+    margin: 10px 0;
+    padding: 10px;
+    width: 445px
+}
+
+.novidades{
+    float: left;
+    background-color: #F5DCDC;
+}
+
+.mais-vendidos{
+    float: right;
+    background-color: #DCDCF5;
+}
+
+.painel h2{
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.painel a{
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
