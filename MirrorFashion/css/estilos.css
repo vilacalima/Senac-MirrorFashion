@@ -19,6 +19,14 @@ header{
     position: relative;
 }
 
+.menu-opcoes a:hover{
+    color: #007DC6;
+}
+
+.menu-opcoes a:active{
+    color: #7CFC00
+}
+
 .menu-opcoes{
     position: absolute;
     bottom: 0;
@@ -58,6 +66,22 @@ header{
     clear: left;
     margin-top: 10px;
     padding-bottom: 10px;
+}
+
+.menu-departamentos li ul{
+    display: none;
+}
+
+.menu-departamentos li:hover ul{
+    display: block;
+}
+
+.menu-departamentos ul ul li {
+    background-color: #DCDCDC;
+}
+
+.menu-departamentos li li a::before{
+    content:'- '
 }
 
 .destaque{
