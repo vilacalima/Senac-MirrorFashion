@@ -129,6 +129,15 @@ header{
     padding-bottom: 10px;
 }
 
+.painel li:hover{
+    background-color: rgba(255,255,255,0.8);
+    /* Adicionando sombra nos cards */
+    box-shadow: 0 0 5px #333;
+    transition: box-shadow 0.7s;
+    /* Rotacionando para a esquerda */
+    transform: scale(1.2) rotate(-5deg);
+}
+
 .painel{
     margin: 10px 0;
     padding: 10px;
@@ -138,11 +147,15 @@ header{
 .novidades{
     float: left;
     background-color: #F5DCDC;
+    /* Colocando o gradiente na imagem */
+    background: linear-gradient(#F5DCDC, #BEBEF4);
 }
 
 .mais-vendidos{
     float: right;
     background-color: #DCDCF5;
+    /* Colocando o gradiente na imagem */
+    background: linear-gradient(#DCDCF5, #F4BEBE);
 }
 
 .painel h2{
