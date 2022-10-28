@@ -7,26 +7,48 @@
     height: 50px;
     /* Ajustando a posição */
     position: absolute;
+    top: 30px;
     /*Limita o botão aumentar de tamanho*/
     box-sizing: border-box;
+    /* Fazindo a borda da bolinha aparecer suavemente */
+    border: 6px solid rgba(0, 0, 0, 0);
+    transition: 1s;
+    /* Mudando o cursor para a mãozinha */
+    cursor: pointer;
+}
+
+.cores label:hover::after{
+    /* Colocando um evendo para quando passar o mouse */
+    border: 6px solid rgba(0, 0, 0, 0.1);
 }
 
 label[for=verde]::after{
     background-color: #33CC66;
+    /* Alinhando as bolinhas à esquerda */
+    left: 0;
 }
 
 label[for=rosa]::after{
     background-color: #FF6666;
+    /* Alinhando as bolinhas à esquerda */
+    left: 60px;
 }
 
 label[for=azul]::after{
     background-color: #6666FF;
+    /* Alinhando as bolinhas à esquerda */
+    left: 120px;
 }
 
+.cores label img{
+    /* Alinhando as imagens para ficarem responsivas */
+    display: block;
+    max-width: 100%;
+}
 .cores{
     /* Colocando as bolinhas de cores para cima */
     position: relative;
-    padding-top: 90%;
+    padding-top: 90px;
 }
 
 .cores input:checked + label::after{
@@ -41,4 +63,85 @@ label[for=azul]::after{
 .cores input:not(:checked) + label img{
     /* Escolhe apenas a foto selecionada */
     display: none;
+}
+
+.produto{
+    /* Colocando espaçamento nos produtos */
+    color: #333;
+    line-height: 1.3;
+    margin-top: 2em;
+}
+
+/* Estilizando a tag h1 */
+.produto h1{
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Estilizando a tag p */
+.produto p{
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+/* Estilizando a tag legend */
+.produto legend{
+    display: block;
+    font: bold 0.9em/2.5 Arial;
+    text-transform: uppercase;
+}
+
+/* Estilizando o botão comprar */
+.comprar{
+    background: #91BD3C;
+    border: none;
+    color: #333;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px #777;
+    display: block;
+    padding: 0.5em lem;
+    margin:lem 0;
+}
+
+/* Definindo o tamanho da tela par 600px na tela principal */
+@media (win-width: 630px){
+    .produto{
+        /* Posicionando a foto por esse elemento */
+        position: relative;
+        /* Deixa 40% de espaço em branco a esquerda para a foto ocupar */
+        padding-left: 40px;
+        /* Aumenta a fonte do elemento pai */
+        font-size: 1.2em;
+
+    }
+
+    .cores{
+        position: static;
+        padding:0;
+    }
+
+    .cores legend{
+        position: static;
+    }
+
+    .cores label img{
+        /* Imagem se posiciona a esquerda com relação ao produto */
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        /* Evita que a imagem vaze para fora do espaço */
+        max-width: 35%;
+        max-height: 100%;
+    }
+    
+    .cores label:after{
+        /* Bolinhas coloridas não tem mais posição absoluta */
+        position: static;
+        float: left;
+        /* Colocando margem dentro das bolinhas coloridas */
+        margin-right: 10px;
+    }
 }
