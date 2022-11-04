@@ -44,6 +44,8 @@ label[for=azul]::after{
     /* Alinhando as imagens para ficarem responsivas */
     display: block;
     max-width: 100%;
+    /* Definindo borda */
+    border: 2px solid #CCC;
 }
 .cores{
     /* Colocando as bolinhas de cores para cima */
@@ -101,17 +103,71 @@ label[for=azul]::after{
     text-transform: uppercase;
     box-shadow: 0 1px 3px #777;
     display: block;
-    padding: 0.5em lem;
-    margin:lem 0;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+}
+
+/* Editando a classe detalhes */
+.detalhes{
+    padding: 2em 0;
+}
+
+.detalhes h2{
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+.detalhes p{
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 36em;
+}
+
+/* Editando a tabela de caracteristicas */
+table{
+    border-spacing: 0.2em;
+    border-collapse: separate;
+}
+
+thead{
+    background-color: #999;
+}
+
+thead th{
+    font-weight: bold;
+    padding: 0.3em 1em;
+    text-align: center;
+}
+
+td{
+    padding: 0.3em;
+    text-align: center;
+}
+
+tr:nth-child(2n){
+    background-color: #ccc;
+}
+
+td:first-child{
+    font-style: italic;
+}
+
+/* Definindo estilo da classe produto-back */
+.produto-back{
+    background-color: #F2F2F2;
+    margin-top: 1em;
+    border-top: 2px solid #ccc;
 }
 
 /* Definindo o tamanho da tela par 600px na tela principal */
-@media (win-width: 630px){
+@media (min-width: 630px){
     .produto{
         /* Posicionando a foto por esse elemento */
         position: relative;
         /* Deixa 40% de espaço em branco a esquerda para a foto ocupar */
-        padding-left: 40px;
+        padding-left: 40%;
+        padding-bottom: 10%;
         /* Aumenta a fonte do elemento pai */
         font-size: 1.2em;
 
@@ -119,13 +175,14 @@ label[for=azul]::after{
 
     .cores{
         position: static;
-        padding:0;
+        padding: 0;
+        /* border:none; */
     }
 
     .cores legend{
         position: static;
     }
-
+    
     .cores label img{
         /* Imagem se posiciona a esquerda com relação ao produto */
         position: absolute;
@@ -143,5 +200,13 @@ label[for=azul]::after{
         float: left;
         /* Colocando margem dentro das bolinhas coloridas */
         margin-right: 10px;
+    }
+
+    fieldset{
+        display: inline-block;
+        vertical-align: top;
+        margin: lem 0;
+        min-width: 240px;
+        width: 45%;
     }
 }
